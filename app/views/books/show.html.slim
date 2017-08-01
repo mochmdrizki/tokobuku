@@ -1,0 +1,15 @@
+- @title = "#{@book.title} | Tokobuku"
+.row
+  .col-sm-4.col-lg-4.col-md-4
+    .thumbnail
+      = image_tag(@book.image_url)
+  .col-sm-8.col-lg-8.col-md-8
+    h3 = @book.title
+    h4.text-info
+      | Rp 
+      = number_with_delimiter(number_with_precision(@book.price, precision: 0), delimiter:".")
+    = button_to 'Add to Cart', line_items_path(book_id: @book)
+    hr
+    .panel.panel-info
+      .panel-heading Description
+      .panel-body = sanitize(@book.description)

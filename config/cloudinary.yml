@@ -1,0 +1,19 @@
+---
+development:
+  cloud_name: dinrffb7t
+  api_key: '136333866448634'
+  api_secret: 8X5FGIHg5eFl6p8fJevtG5DCbzY
+  enhance_image_tag: true
+  static_image_support: false
+production:
+  cloud_name: dinrffb7t
+  api_key: '136333866448634'
+  api_secret: 8X5FGIHg5eFl6p8fJevtG5DCbzY
+  enhance_image_tag: true
+  static_image_support: true
+test:
+  cloud_name: dinrffb7t
+  api_key: '136333866448634'
+  api_secret: 8X5FGIHg5eFl6p8fJevtG5DCbzY
+  enhance_image_tag: true
+  static_image_support: false

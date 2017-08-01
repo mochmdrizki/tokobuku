@@ -1,0 +1,8 @@
+- item = "#{line_item.book.title} (#{line_item.quantity})"
+tr
+  td = link_to image_tag(line_item.book.image.thumb.url, width: 50), line_item.book
+  td
+    h5.text-info = item
+    | Rp 
+    = number_with_delimiter(number_with_precision(line_item.total_price, precision: 0), delimiter:".")
+    

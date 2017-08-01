@@ -1,0 +1,16 @@
+- @title = "Shopping Cart | Tokobuku"
+- unless cart.line_items.empty?
+  col-lg-12.col-md-12.col-sm-12
+    h4 Your Cart
+    table.table.table-striped
+      = render(cart.line_items)
+      tr
+        td.bg-info colspan="2"
+          h5
+            | Total: Rp 
+            = number_with_delimiter(number_with_precision(@cart.total_price, precision: 0), delimiter:".")
+    
+  col-lg-12.col-md-12.col-sm-12    
+    = button_to 'Empty Cart', @cart, method: :delete, data: {confirm: 'Are you sure?'}, class: 'btn btn-danger btn-xs'
+- else
+  h4 Your cart is currently empty.

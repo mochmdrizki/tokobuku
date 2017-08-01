@@ -1,0 +1,12 @@
+- @title = "Tokobuku"
+- @books.each do |book|
+  .col-sm-4.col-lg-4.col-md-4
+    .thumbnail
+      = link_to image_tag(book.image.url), book
+      .caption
+        h5 = link_to book.title, book
+        small = book.author
+        h5.text-info
+          | Rp 
+          = number_with_delimiter(number_with_precision(book.price, precision: 0), delimiter:".")
+        = button_to 'Add to Cart', line_items_path(book_id: book), class: 'btn btn-sm'
