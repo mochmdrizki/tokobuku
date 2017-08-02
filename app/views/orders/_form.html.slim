@@ -1,0 +1,22 @@
+= form_for @order, html: { class: "form-horizontal" } do |f|
+  .form-group
+    = f.label :name, class: 'control-label col-md-2'
+    .col-md-10
+      = f.text_field :name, class: 'text_field form-control'
+  .form-group
+    = f.label :address, class: 'control-label col-md-2'
+    .col-md-10
+      = f.text_area :address, class: 'text_field form-control', rows: 3, style: 'resize:none'
+  .form-group
+    = f.label :email, class: 'control-label col-md-2'
+    .col-md-10
+      = f.email_field :email, class: 'text_field form-control'
+  .form-group
+    = f.label :pay_type, class: 'control-label col-md-2'
+    .col-md-10
+      / = f.text_field :pay_type, class: 'text_field form-control'
+      = f.select :pay_type, Order.pay_types.keys, id: :order_pay_type, prompt: 'Select a payment method'
+  .form-group
+    .col-md-offset-2.col-md-10
+      = f.submit 'Place Order', class: 'btn btn-primary'
+      / = link_to t('.cancel', default: t("helpers.links.cancel")), orders_path, class: 'btn btn-default'

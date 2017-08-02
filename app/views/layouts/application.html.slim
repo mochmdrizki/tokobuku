@@ -21,7 +21,7 @@ html lang="en"
 
   body
     nav.navbar.navbar-default role="navigation"
-      .container
+      .container-fluid
         .navbar-header
           button.navbar-toggle type="button" data-toggle="collapse" data-target=".navbar-responsive-collapse"
             span.icon-bar
@@ -37,7 +37,7 @@ html lang="en"
           ul.nav.navbar-nav.navbar-right
             li = link_to "Checkout", "#"
             li = link_to "My Account", "#"
-    .container
+    .container-fluid
       .row
         .col-md-8
           = bootstrap_flash

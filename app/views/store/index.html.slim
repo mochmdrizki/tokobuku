@@ -2,7 +2,7 @@
 - @books.each do |book|
   .col-sm-4.col-lg-4.col-md-4
     .thumbnail
-      = link_to image_tag(book.image.url), book
+      = link_to image_tag(book.image.url, style: 'height:300px'), book
       .caption
         h5 = link_to book.title, book
         small = book.author
